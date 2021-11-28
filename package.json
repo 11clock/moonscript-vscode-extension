@@ -1,7 +1,7 @@
 {
-    "name": "moonscript",
-    "displayName": "MoonScript",
-    "description": "Working MoonScript support for vscode.",
+    "name": "yuescript",
+    "displayName": "YueScript",
+    "description": "Working YueScript support for vscode.",
     "version": "0.1.1",
     "publisher": "vgalaktionov",
     "engines": {
@@ -12,9 +12,9 @@
     ],
     "contributes": {
         "configuration": {
-            "title": "Moonscript configuration",
+            "title": "Yuescript configuration",
             "properties": {
-                "moonscript.enableLinting": {
+                "yuescript.enableLinting": {
                     "type": "boolean",
                     "default": true,
                     "description": "enable or disable linting"
@@ -23,41 +23,44 @@
         },
         "languages": [
             {
-                "id": "moonscript",
+                "id": "yuescript",
                 "aliases": [
-                    "MoonScript",
-                    "moonscript"
+                    "YueScript",
+                    "yuescript"
                 ],
                 "extensions": [
-                    ".moon"
+                    ".yue"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "moonscript",
-                "scopeName": "source.moonscript",
-                "path": "./syntaxes/moonscript.json"
+                "language": "yuescript",
+                "scopeName": "source.yuescript",
+                "path": "./syntaxes/yuescript.json"
             }
         ],
         "snippets": [
             {
-                "language": "moonscript",
-                "path": "./snippets/moonscript.json"
+                "language": "yuescript",
+                "path": "./snippets/yuescript.json"
             }
         ]
     },
     "main": "./src/extension.js",
     "activationEvents": [
-        "onLanguage:moonscript"
+        "onLanguage:yuescript"
     ],
     "devDependencies": {
         "vscode": "^1.1.21"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/vgalaktionov/moonscript-vscode-extension.git"
+        "url": "https://github.com/vgalaktionov/yuescript-vscode-extension.git"
     },
-    "icon": "logo.png"
+    "icon": "logo.png",
+    "dependencies": {
+        "event-stream": "^3.3.4"
+    }
 }

@@ -9,7 +9,7 @@ const { exec } = require("child_process")
 // Whether to lint or not
 let doLint = false
 
-let diagnosticCollection = vscode.languages.createDiagnosticCollection("moonscript")
+let diagnosticCollection = vscode.languages.createDiagnosticCollection("yuescript")
 
 // Extension starting point
 function activate(context) {
@@ -20,13 +20,13 @@ function activate(context) {
   })
 
   vscode.workspace.onDidOpenTextDocument(doc => {
-    if (doc.languageId === "moonscript") {
+    if (doc.languageId === "yuescript") {
       lintFile(doc)
     }
   })
 
   vscode.workspace.onDidSaveTextDocument(doc => {
-    if (doc.languageId === "moonscript") {
+    if (doc.languageId === "yuescript") {
       lintFile(doc)
     }
   })
@@ -35,7 +35,7 @@ function activate(context) {
 }
 
 function checkSettings() {
-  doLint = vscode.workspace.getConfiguration().get("moonscript.enableLinting") === true
+  doLint = vscode.workspace.getConfiguration().get("yuescript.enableLinting") === true
 }
 
 function lintFile(doc) {
