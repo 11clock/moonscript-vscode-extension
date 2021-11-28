@@ -101,7 +101,7 @@
             ]
         },
         {
-            "match": "(?x)\\b(?<![\\.\\$])(\\b(if|then|else|elseif|export|import|from|switch|and|or|not|when|with|using|do|for|in|while|return|unless|continue|break|local|global)\\b)(?!\\s*:)\\b",
+            "match": "(?x)\\b(?<![\\.\\$])(\\b(if|then|else|elseif|export|import|from|switch|and|or|not|when|with|using|do|for|in|while|return|unless|continue|break|local|global|as)\\b)(?!\\s*:)\\b",
             "name": "keyword.control.yue"
         },
         {
@@ -205,7 +205,7 @@
             "name": "support.function.yue"
         },
         {
-            "match": "@?[A-Za-z_]\\w+(?=\\(|!|[ ]+(\"|'|\\{|-?(?!if|then|else|elseif|export|import|from|and|or|not|with|for|in|while|return|unless|continue|break|local|global)\\w+))",
+            "match": "@?[A-Za-z_]\\w+(?=\\??(\\(|!|[ ]+(\"|'|\\{|-?(?!if|then|else|elseif|export|import|from|and|or|not|with|for|in|while|return|unless|continue|break|local|global|as)\\w+)))",
             "name": "support.function.yue"
         },
         {
